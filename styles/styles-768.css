@@ -1,0 +1,57 @@
+
+
+body{
+    display:block;
+    /* grid-template-columns: auto;
+    grid-template-rows: auto auto; */
+}
+
+main{
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 1rem;
+    /* padding: 1rem; */
+}
+
+nav{
+    z-index: 99;
+    top: 93%;
+    position:fixed;
+    width: 100%;
+    height: 70px;
+    
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5)
+}
+
+.section-container{
+    min-height: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px 0px, rgba(0, 0, 0, 0.15) 0px 0px 3px 1px;
+}
+#hero-section{
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    border-radius: 3rem 0.5rem 0.5rem 0.5rem;
+}
+
+#projects-section{
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    border-radius:  0.5rem 3rem 0.5rem 0.5rem;
+}
+
+#about-section{
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    border-radius:  0.5rem 0.5rem  0.5rem 3rem;
+}
+
+#contact-section{
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+
+    color: rgb(240, 240, 240);
+    border-radius:  0.5rem 0.5rem 3rem 0.5rem ;
+    background-color: var(--primer-color) ;
+}
