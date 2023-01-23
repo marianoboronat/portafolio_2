@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- icons -->
+    <style>
+        .material-symbols-rounded {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48;
+          /* fill: beige; */
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +24,8 @@
     
     <!-- styles -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/styles-1000.css" media="screen and (max-width: 900px)">
-    <link rel="stylesheet" href="styles/styles-768.css" media="screen and (max-width: 768px)">    
+    <link rel="stylesheet" href="styles/styles-900.css" media="screen and (max-width: 900px)">
+    <link rel="stylesheet" href="styles/styles-768.css" media="screen and (max-width: 480px)">    
 
     <!-- scripts -->
     <script src="main.js"></script>
@@ -21,6 +33,20 @@
 </head>
 <body>
     <nav>
+        <ul class="nav-list">
+            <li class="nav__item">
+                <a href=""><span class="material-symbols-rounded">home</span></a>
+            </li>
+            <li class="nav__item">
+                <a href=""><span class="material-symbols-rounded">file_copy</span></a>
+            </li>
+            <li class="nav__item">
+                <a href=""><span class="material-symbols-rounded">face</span></a>
+            </li>
+            <li class="nav__item">
+                <a href=""><span class="material-symbols-rounded">mail</span></a>
+            </li>
+        </ul>
         
     </nav>
     <main>
@@ -35,29 +61,58 @@
                 </div>
                 <div class="content_title">
                     <p class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nesciunt est voluptatibus perferendis neque, et ducimus pariatur. Eius, reprehenderit quibusdam?                
+                        ¡Buenas! soy Data Analyst developer Junior. Autodidacta.
                     </p>
                 </div>
             </div>
         </section>
+
         <section class="section-container" id="projects-section">
-            <h2 class="section__title">Proyectos</h2>
-            <p class="section-description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nesciunt est voluptatibus perferendis neque, et ducimus pariatur. Eius, reprehenderit quibusdam?                
-            </p>
+            
+            <div class="section-main-content">
+                
+                <div class="section__title-container">
+                    <h2 class="section__title">Proyectos</h2>
+                </div>
+                <div class="section__title-container">
+                    <p class="section-description">
+                        Te invito a conocer mis proyectos y trabajos personales. <br>
+                        La mayoría son de Python, otros son de JavaScript HTML y CSS. <br>
+                        Cada uno responde a una consigna auto-impuesta. <br>
+                        Aunque algunos no están terminados, muchos funcionan.             
+                    </p>
+                </div>
+            </div>
         </section>
+
         <section class="section-container" id="about-section">
-            <h2 class="section__title">Un poco sobre mi...</h2>
+            <h2 class="section__title">Sobre mis <br>
+                experiencias...</h2>
             <p class="section-description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nesciunt est voluptatibus perferendis neque, et ducimus pariatur. Eius, reprehenderit quibusdam?                
+                Mi interés por la programación comenzó por la necesidad de querer mejorar en mi trabajo. <br>
+                Desde allí despertó una pasión de           
             </p>
         </section>
+
         <section class="section-container" id="contact-section">
             <h2 class="section__title" id="title_contact">Contácteme</h2>
             <p class="section-description">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nesciunt est voluptatibus perferendis neque, et ducimus pariatur. Eius, reprehenderit quibusdam?                
             </p>
+            <form id="contact__form-container" action="">
+                <input id="contact__form-name" placeholder="Escriba aquí su nombre" type="text">
+                <input id="contact__form-email" type="text" placeholder="Escriba aquí su Email">
+                <textarea name="" id="contact__form-message" cols="30" rows="5" placeholder="Escriba aquí su mensaje"></textarea>
+            </form>
+            <div class="contact__buttons-section">
+                <button id="section__submit">Submit</button>
+                <button id="section__download-cv">Descargar PDF</button>
+            </div>            
         </section>
+
+        <div class="easter-egg">
+            <div class="easter-egg__message"></div>
+        </div>
 
     </main>
 

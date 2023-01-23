@@ -28,6 +28,13 @@ html{
     font-size: 62.5%;
     background-color: var(--background_main_container); 
 }
+
+body{
+    
+    margin: auto;
+    /* min-width: 1440px; */
+    max-width: 1920px;
+}
 main{
     height: 100vh;
     
@@ -44,7 +51,54 @@ h2,h3,p{
 }
 
 nav{
+    display: none;
     box-shadow: 0 0 10px 0 black ;
+}
+.nav__item{
+    list-style: none;
+}
+.material-symbols-rounded{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.easter-egg{
+    border-radius: 50%;
+    z-index: 98;
+    top: 97.5%;
+    left: 99%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.03);
+    height: 10px;
+    width: 10px;
+    transition: 0.5s ease-in-out;
+}
+.easter-egg:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 12px;
+    width: 12px;
+    box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.2);
+
+}
+
+.easter-egg__message{
+    border-radius: 1rem 1rem 0 1rem ;
+    position: absolute;
+    transform: scale(0);
+    /* top: -55px;
+    left: -55px; */
+    width: 200px;
+    height: 100px;
+    background-color: var(--segundo-color);
+}
+
+.easter-egg:hover .easter-egg__message{
+    transition: 0.3s ease-in-out;
+    top: -95px;
+    left: -195px;
+    transform: scale(1);
+
 }
 
 .loguito{
@@ -72,21 +126,18 @@ nav{
     overflow: hidden;
     border-radius: 2rem;
     padding: 2rem;
-    background-color: var(--background_main_container);
-    /* border: 1px solid black ; */
     width: 100%;
-
-
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.2s ease-in-out;
     filter: brightness(0.97);
+    box-shadow: rgba(255, 255, 255, 0.08)0 0 0 1px;
+    transition: 0.3s ease-in-out;
 }
 
 .section-container:hover{
+    filter: brightness(1.1);
     /* transform: scaleX(1.05) scaleY(1.05); */
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 0px,
                 rgba(0, 0, 0, 0.3) 0px 0px 3px 1px,    
@@ -95,28 +146,21 @@ nav{
 
 .section-main-content{
     width: 100%;
-    transition: 0.3s;    
-    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
 }
-
-.section-container:hover .section-main-content{
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
 
 .section__title{
     width: 100%;
     border-bottom: 1px solid var(--primer-color);
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-family:var(--fuente-h2)
 
 }
 
 .section-description{
+    margin-top: 1rem;
     font-size: 1.6rem;
 }
 
@@ -124,36 +168,38 @@ nav{
 #projects-section,
 #about-section{
     background: rgb(45,45,45);
-
 }
+
 #hero-section{
+    background: linear-gradient( 0deg,var(--background_main_container_2) 85%, rgb(39, 39, 39) 100%);
     grid-column-start: 1 ;
     grid-column-end: 3 ;
     border-radius: 3rem 0.5rem 0.5rem 0.5rem;
-    background-color: var(--background_main_container_2);
 }
 
 #projects-section{
+    background: linear-gradient( 0deg,var(--background_main_container_2) 85%, rgb(39, 39, 39) 100%);
     grid-column-start: 3 ;
     grid-column-end: 7 ;
     border-radius:  0.5rem 3rem 0.5rem 0.5rem;
-    background-color: var(--background_main_container_2);
 }
 
 #about-section{
+    background: linear-gradient( 0deg,var(--background_main_container_2) 85%, rgb(39, 39, 39) 100%);
     grid-column-start: 1 ;
     grid-column-end: 4 ;
     border-radius:  0.5rem 0.5rem  0.5rem 3rem;
-    background-color: var(--background_main_container_2);
 }
 
 #contact-section{
     grid-column-start:4 ;
     grid-column-end: 7 ;
     color: aliceblue;
-    border-radius:  0.5rem 0.5rem 3rem 0.5rem ;
+    border-radius:  0.5rem 0.5rem 5rem 0.5rem ;
     background-color: var(--primer-color) ;
-    box-shadow: 0 0 10px 0 rgba(4, 4, 4, 0.2) inset;
+    transition: none;
+
+    
     
 }
 
@@ -162,19 +208,104 @@ nav{
     color: black;
 }
 
-
 #hero-section:hover,
 #projects-section:hover,
 #about-section:hover{
-    filter: brightness(1.1);
     box-shadow: -1px 0px 0px 0px  rgba(255, 255, 255, 0.08) inset,
                 -1px 0px 0px 0px rgba(255, 255, 255, 0.141),
                  0 -1px 0px 0  rgba(255, 255, 255, 0.4) ;
-    background: linear-gradient( 0deg,var(--background_main_container_2) 85%, rgb(39, 39, 39) 100%);
-    transition: 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #contact-section:hover{
-    filter: brightness(1.1);
-    box-shadow:  1px 1px  3px 0px rgba(0, 0, 0, 0.5) inset;
+    transition: 0.3s ease-in-out;
 }
+
+#title_contact{
+    border-bottom: 1px solid black ;
+}
+
+
+/* contact */
+
+#contact__form-container{
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact__form-name,
+#contact__form-email,
+#contact__form-message{
+    font-size: 1.6rem;
+    margin: 0.5rem;    
+    border-radius: 0rem;
+    border: none;
+    background: none;
+    background-color: rgba(255, 255, 255, 0.145);
+    /* box-shadow: 0 1px  0 0px black; */
+    padding: 1rem;
+    border-bottom: 1px solid black;    
+    background: linear-gradient( 0deg, rgba(17, 255, 172, 0.323)30% ,rgba(255, 255, 255, 0)70% );
+}
+
+#contact__form-message{
+    resize: none;
+    height: 100px;
+}
+
+
+
+
+
+.contact__buttons-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between
+
+}
+
+#section__download-cv,
+#section__submit{
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 120px;
+    background:none;
+    border: none;
+    box-shadow: 0 0 0 1px black;
+    transition:  0.2s ease-in-out;
+}
+
+#section__submit{
+    color: var(--background_main_container_2);
+    background-color: var(--primer-color);
+
+}
+#section__submit:hover{
+    color: var(--primer-color);
+    background-color: var(--background_main_container_2);
+
+}
+
+
+#section__download-cv{
+    color: var(--primer-color);
+    background-color: var(--background_main_container_2);
+}
+
+#section__download-cv:hover{
+    /* font-size: 1.3rem; */
+    /* filter: brightness(1.1); */
+    color: black;
+    background-color: var(--primer-color);
+}
+
+div{
+    border: 1px black;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(0, 0, 0);
+    opacity: 0.4; /* Firefox */
+  }
