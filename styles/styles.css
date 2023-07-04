@@ -159,6 +159,10 @@ nav{
 
 }
 
+.section__containter-description{
+    overflow: hidden;
+}
+
 .section-description{
     margin-top: 1rem;
     font-size: 1.6rem;
@@ -223,7 +227,9 @@ nav{
 #title_contact{
     border-bottom: 1px solid black ;
 }
-
+#section__text-contact{
+    color: black;
+}
 
 /* contact */
 

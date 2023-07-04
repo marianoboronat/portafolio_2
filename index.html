@@ -8,11 +8,7 @@
     <!-- icons -->
     <style>
         .material-symbols-rounded {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48;
+          font-variation-settings:'FILL' 0, 'wght' 400, 'GRAD' 0,'opsz' 48;
           /* fill: beige; */
         }
     </style>
@@ -24,6 +20,7 @@
     
     <!-- styles -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/styles-900.css" media="screen and (max-width: 900px)">
     <link rel="stylesheet" href="styles/styles-768.css" media="screen and (max-width: 480px)">    
 
@@ -60,9 +57,14 @@
                     <h2 class="section__title">Mariano Boronat</h2>
                 </div>
                 <div class="content_title">
-                    <p class="section-description">
-                        ¡Buenas! soy Data Analyst developer Junior. Autodidacta.
-                    </p>
+                    <h2>
+                        Python Developer Junior. 
+                    </h2>
+                    <div class="section__containter-description">
+                        <p class="section-description">                            
+                            Quiero pasar de ser un profesional de la Programación. 
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -74,12 +76,12 @@
                 <div class="section__title-container">
                     <h2 class="section__title">Proyectos</h2>
                 </div>
-                <div class="section__title-container">
+                <div class="section__containter-description" id="section__title-container">
                     <p class="section-description">
                         Te invito a conocer mis proyectos y trabajos personales. <br>
                         La mayoría son de Python, otros son de JavaScript HTML y CSS. <br>
                         Cada uno responde a una consigna auto-impuesta. <br>
-                        Aunque algunos no están terminados, muchos funcionan.             
+                        Aunque algunos no están terminados, todos funcionan.             
                     </p>
                 </div>
             </div>
@@ -88,17 +90,24 @@
         <section class="section-container" id="about-section">
             <h2 class="section__title">Sobre mis <br>
                 experiencias...</h2>
-            <p class="section-description">
-                Mi interés por la programación comenzó por la necesidad de querer mejorar en mi trabajo. <br>
-                Desde allí despertó una pasión de           
-            </p>
+                <div class="section__containter-description">
+                    <p class="section-description">
+                        Mi interés por la programación comenzó por la necesidad de querer optimizar tareas en mi trabajo. <br>
+                        Desde que aprendí a crear aplicaciones básicas, siempre traté de aportar con programas que ayude al equipo de trabajo a facilitar tareas.
+
+                    </p>
+                </div>
         </section>
 
         <section class="section-container" id="contact-section">
             <h2 class="section__title" id="title_contact">Contácteme</h2>
-            <p class="section-description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nesciunt est voluptatibus perferendis neque, et ducimus pariatur. Eius, reprehenderit quibusdam?                
-            </p>
+            
+            <div class="section__containter-description">
+                <p class="section-description"id ="section__text-contact">
+                    Si está interesado/a en mis habilidades, no dude en contactarme.
+                    por mi LinkedIn o directo por e-mail.
+                </p>
+            </div>
             <form id="contact__form-container" action="">
                 <input id="contact__form-name" placeholder="Escriba aquí su nombre" type="text">
                 <input id="contact__form-email" type="text" placeholder="Escriba aquí su Email">

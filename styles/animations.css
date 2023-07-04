@@ -1,0 +1,50 @@
+@import url(style.css);
+
+
+.section-description{
+    transform: translateY(-140%) ;
+    transition: 0.35s linear;
+}
+
+.section-container:hover .section-description{
+    
+    transform: translateY(0%);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+
+
+
+@keyframes abajoHaciaArriba{
+    0%{
+        /* color: var(--background_main_container); */
+        transform: translateY(100%);
+    }
+
+
+    100%{
+        color: var(--color-texto);
+        transform: translateY(0%);
+    }
+
+}
+
+
+
+@keyframes arribaHaciaAbajo{
+    0%{
+        /* color: var(--background_main_container); */
+        transform: translateY(-102%);
+    }
+    30%{
+        /* color: var(--background_main_container); */
+        transform: translateY(-102%);
+    }
+    100%{
+        color: var(--color-texto);
+        transform: translateY(0%);
+    }
+
+}

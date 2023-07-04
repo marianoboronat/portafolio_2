@@ -54,6 +54,11 @@ nav{
     filter: none;
 }
 
+.section-description{
+    transform: translateY(0%);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 #hero-section{
     grid-column-start: 1 ;
     grid-column-end: 2 ;
